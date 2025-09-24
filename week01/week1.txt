@@ -1,0 +1,69 @@
+//Wire
+module top_module(
+input in,
+output out );
+assign out=in;
+endmodule
+//Four Wire
+module top_module(
+input a,
+input b,
+input c,
+output w,
+output x,
+output y,
+output z );
+assign w=a;
+assign x=b;
+assign y=b;
+assign z=c;
+endmodule
+//Inverter
+module top_module(
+input in,
+output out );
+assign out=~in;
+endmodule
+//AND
+module top_module(
+input a,
+input b,
+output out );
+assign out=a&b;
+
+endmodule
+//NOR
+module top_module(
+input a,
+input b,
+output out );
+assign out=~(a|b);
+endmodule
+//XNOR
+module top_module(
+input a,
+input b,
+output out );
+assign out=~(a^b);
+endmodule
+Declaring wires
+`default_nettype none
+module top_module(
+input a,
+input b,
+input c,
+input d,
+output out,
+output out_n );
+assign out=(a&b)|(c&d);
+assign out_n=!((a&b)|(c&d));
+endmodule
+//7458
+module top_module (
+input p1a, p1b, p1c, p1d, p1e, p1f,
+output p1y,
+input p2a, p2b, p2c, p2d,
+output p2y );
+assign p1y=(p1a&p1b&p1c)|(p1d&p1e&p1f);
+assign p2y=(p2a&p2b)|(p2c&p2d);
+endmodule

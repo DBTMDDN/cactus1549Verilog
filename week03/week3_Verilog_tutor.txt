@@ -1,4 +1,4 @@
-HALF_ADDER
+//HALF_ADDER
 module top_module( 
     input a, b,
     output cout, sum );
@@ -6,7 +6,7 @@ module top_module(
     assign cout=a&b;
 endmodule
 
-FULL_ADDER
+//FULL_ADDER
 module top_module( 
     input a, 
     b, 
@@ -17,7 +17,7 @@ module top_module(
     assign cout=(a&b)|((a^b)&cin);
 endmodule
 
-3_BIT_BINARY_ADDER
+//3_BIT_BINARY_ADDER
 module full_adder( 
     input a, 
     b, 
@@ -58,7 +58,7 @@ module top_module(
 endmodule
 
 
-4BIT_ADDER
+//4BIT_ADDER
 module full_adder( 
     input x, 
     y, 

@@ -6,16 +6,16 @@ module top_module(
     output reg [99:0] q); 
 always@(posedge clk) begin
     if(load)begin
-        q=data;
+        q<=data;
     end
     else if(ena==2'b01) begin
-        q={q[0],q[99:1]};
+        q<={q[0],q[99:1]};
     end
     else if(ena==2'b10) begin
-        q={q[98:0],q[99]};
+        q<={q[98:0],q[99]};
     end
     else begin
-       q=q;
+       q<=q;
     end
 end
 endmodule
